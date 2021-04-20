@@ -8,12 +8,15 @@
     tools:context=".MainActivity" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="186dp"
+        android:id="@+id/consL1"
+        android:layout_width="165dp"
         android:layout_height="165dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/consL3"
+        app:layout_constraintEnd_toStartOf="@+id/consL2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -97,14 +100,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="186dp"
+        android:id="@+id/consL2"
+        android:layout_width="165dp"
         android:layout_height="165dp"
         android:layout_marginEnd="8dp"
         android:background="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+        app:layout_constraintStart_toEndOf="@+id/consL1"
+        app:layout_constraintTop_toTopOf="@+id/consL1">
 
         <Button
             android:id="@+id/button4"
@@ -176,7 +180,7 @@
             android:id="@+id/imageView19"
             android:layout_width="46dp"
             android:layout_height="42dp"
-            android:layout_marginStart="66dp"
+            android:layout_marginStart="54dp"
             android:layout_marginTop="47dp"
             android:background="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -188,13 +192,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="186dp"
+        android:id="@+id/consL3"
+        android:layout_width="165dp"
         android:layout_height="165dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/consL1">
 
         <Button
             android:id="@+id/button5"
@@ -264,27 +269,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="69dp"
-        android:background="@color/colorTop"
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="109dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorAccent"
+        android:text="SALIR"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            android:text="VaxID"
-            android:textAlignment="center"
-            android:textColor="#E4E1E1"
-            android:textSize="36sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
