@@ -12,13 +12,26 @@
         android:layout_width="165dp"
         android:layout_height="165dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/consL3"
         app:layout_constraintEnd_toStartOf="@+id/consL2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <Button
+            android:id="@+id/btnCrearQR"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -41,19 +54,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/plus" />
-
-        <Button
-            android:id="@+id/button3"
-            style="@android:style/Widget.Holo.Button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -111,7 +111,7 @@
         app:layout_constraintTop_toTopOf="@+id/consL1">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnScanQR"
             style="@android:style/Widget.Holo.Button"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -184,7 +184,7 @@
             android:layout_marginTop="47dp"
             android:background="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/button4"
+            app:layout_constraintEnd_toEndOf="@+id/btnScanQR"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/lupa" />
@@ -202,7 +202,7 @@
         app:layout_constraintTop_toBottomOf="@+id/consL1">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnVerQR"
             style="@android:style/Widget.Holo.Button"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -270,13 +270,37 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnSalir"
         android:layout_width="109dp"
         android:layout_height="62dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorAccent"
         android:text="SALIR"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTop"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="VaxID"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
