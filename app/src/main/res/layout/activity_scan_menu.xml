@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".RegisterActivity">
+    tools:context=".ScanMenuActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
+        android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorTop"
@@ -19,60 +19,64 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewTop1"
+        android:id="@+id/textViewTop2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Crear tu codigo"
+        android:text="Informacion Adicional"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBack" />
+        app:layout_constraintStart_toEndOf="@+id/btnBack2" />
 
-    <Button
-        android:id="@+id/btnCerti"
+    <EditText
+        android:id="@+id/editTextName"
+        style="@android:style/Widget.Holo.EditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorAccent"
-        android:text="ESCANEAR CERTIFICADO DE VACUNACION"
-        android:textColor="#FDFDFD"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#B6B0B0"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        tools:text="Nombres" />
 
-    <Button
-        android:id="@+id/btnInfo"
+    <EditText
+        android:id="@+id/editTextLastName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorAccent"
-        android:text="AÑADIR INFORMACION"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFB6B0B0"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCerti" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        tools:text="Apellidos" />
 
-    <Button
-        android:id="@+id/btnCrear"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorAccent"
-        android:text="CREAR CÓDIGO"
-        android:textColor="#FFFFFF"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="84dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
 
     <ImageButton
-        android:id="@+id/btnBack"
+        android:id="@+id/btnBack2"
         android:layout_width="59dp"
         android:layout_height="55dp"
         android:background="#00FFFFFF"
