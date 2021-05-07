@@ -14,7 +14,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnInfo.setOnClickListener{
-            val intent = Intent(this, ScanMenuActivity::class.java)
+            val intent = Intent(this, InfoActivity::class.java)
             startActivity(intent)
         }
     }
