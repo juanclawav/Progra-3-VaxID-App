@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnScanQR.setOnClickListener{
-            val intent = Intent(this, ScansListActivity::class.java)
+            val intent = Intent(this, ScanMenuActivity::class.java)
             intent.putExtra("historial", Gson().toJson(historialScans))
             startActivityForResult(intent, requestCodeH)
         }

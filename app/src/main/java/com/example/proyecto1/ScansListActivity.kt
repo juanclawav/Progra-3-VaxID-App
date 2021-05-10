@@ -1,5 +1,6 @@
 package com.example.proyecto1
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,5 +14,9 @@ class ScansListActivity : AppCompatActivity() {
 
         recyclerViewPerfiles.adapter = adapter
         recyclerViewPerfiles.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        btnBack3.setOnClickListener {
+            val intent = Intent(this, ScanMenuActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

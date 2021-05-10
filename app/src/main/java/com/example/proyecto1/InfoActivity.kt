@@ -27,7 +27,7 @@ class InfoActivity : AppCompatActivity() {
             setContentView(R.layout.activity_info)
 
             btnBack2.setOnClickListener {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, RegisterActivity::class.java)
                 startActivity(intent)
             }
             btnCam.setOnClickListener {
@@ -39,12 +39,13 @@ class InfoActivity : AppCompatActivity() {
                 intent.action = MediaStore.ACTION_IMAGE_CAPTURE
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
                 startActivityForResult(intent, requestCodeCamera)
+
             }
             btnUpload.setOnClickListener {
                 val intent = Intent()
                 intent.action=Intent.ACTION_PICK
                 intent.type = "image/*"
-                startActivityForResult(Intent.createChooser(intent,"Escoge una foto tuya"), requestCodeCamera)
+                startActivityForResult(Intent.createChooser(intent,"Escoge una foto tuya"), requestCodeGallery)
             }
             val Departamentos = arrayOf("CH", "LP", "CB", "OR", "PT", "TJ", "SC", "BE", "PD")
             val ArrayDps =
@@ -53,13 +54,11 @@ class InfoActivity : AppCompatActivity() {
 
             val lugaresLP = arrayOf("UMSA", "UPEA", "ProSalud", "EMI")
             val lugaresCB = arrayOf("Sennfeld", "Pacata", "ProSalud", "COMBASE")
-
-            val arrayLgs =
-                ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, lugaresLP)
-            spinnerLugaresVac.adapter = arrayLgs
-
+        spinnerDepts.setSelection(1)
+        val arrayLgs1 =
+            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, lugaresLP)
+        spinnerLugaresVac.adapter = arrayLgs1
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == requestCodeGallery) {

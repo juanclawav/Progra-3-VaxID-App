@@ -1,5 +1,6 @@
 package com.example.proyecto1
 
+import android.graphics.Bitmap
 import android.net.Uri
 import com.google.gson.annotations.Expose
 
@@ -8,5 +9,6 @@ data class Perfil(
     @Expose val nombres: String,
     @Expose val apellidos: String,
     @Expose var hora: String,
-    @Expose var cantidad: Int = 1
+    @Expose var cantidad: Int = 1,
+    @Expose var qrCode : Bitmap
 )
