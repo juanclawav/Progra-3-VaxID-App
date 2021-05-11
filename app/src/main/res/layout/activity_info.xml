@@ -7,6 +7,28 @@
     android:background="@color/colorPrimary"
     tools:context=".InfoActivity">
 
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:text="ACEPTAR"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePic" />
+
+    <CheckBox
+        android:id="@+id/checkBoxName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:editable="true"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxPlace"
+        app:layout_constraintStart_toEndOf="@+id/btnUpload"
+        app:layout_constraintTop_toTopOf="@+id/btnUpload" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
@@ -98,17 +120,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:clickable="false"
         android:editable="false"
         app:layout_constraintStart_toEndOf="@+id/editTextName"
         app:layout_constraintTop_toTopOf="@+id/editTextName" />
 
     <CheckBox
-        android:id="@+id/checkBoxName2"
+        android:id="@+id/checkBoxPlace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:clickable="true"
         android:editable="true"
         app:layout_constraintStart_toEndOf="@+id/spinnerLugaresVac"
         app:layout_constraintTop_toTopOf="@+id/spinnerLugaresVac" />
@@ -118,7 +138,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:clickable="false"
         android:editable="false"
         app:layout_constraintStart_toEndOf="@+id/editTextLastName"
         app:layout_constraintTop_toTopOf="@+id/editTextLastName" />
@@ -155,11 +174,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnUpload"
-        app:srcCompat="@drawable/avi1"
-        android:scaleType="centerCrop"/>
+        app:srcCompat="@drawable/avi1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

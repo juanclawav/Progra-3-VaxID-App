@@ -4,7 +4,7 @@ import android.net.Uri
 import com.google.gson.*
 import java.lang.reflect.Type
 
-internal class UriAdpter : JsonSerializer<Uri>, JsonDeserializer<Uri> {
+internal class UriAdapter : JsonSerializer<Uri>, JsonDeserializer<Uri> {
     @Throws(JsonParseException::class)
     override fun deserialize(
         json: JsonElement,

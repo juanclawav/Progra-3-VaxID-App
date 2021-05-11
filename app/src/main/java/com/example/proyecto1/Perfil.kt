@@ -5,10 +5,12 @@ import android.net.Uri
 import com.google.gson.annotations.Expose
 
 data class Perfil(
-    @Expose val fotoPerfil: Uri?,
-    @Expose val nombres: String,
-    @Expose val apellidos: String,
+    @Expose var fotoPerfil: Uri?,
+    @Expose var certificado: Uri?,
+    @Expose var nombres: String,
+    @Expose var apellidos: String,
     @Expose var hora: String,
-    @Expose var cantidad: Int = 1,
-    @Expose var qrCode : Bitmap
+    @Expose var qrCode : Bitmap?,
+    @Expose var lugar : String?,
+    @Expose var depto : String?
 )

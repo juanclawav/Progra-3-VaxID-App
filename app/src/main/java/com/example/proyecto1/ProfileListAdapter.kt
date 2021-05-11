@@ -39,5 +39,6 @@ class ProfileListRecyclerViewAdapter (val listaPerfiles: MutableList<Perfil>): R
         fun bind(profile: Perfil) {
             itemView.findViewById<TextView>(R.id.textViewNombresPerfil).text = profile.nombres + profile.apellidos
             itemView.findViewById<ImageView>(R.id.imageViewFotoPerfil).setImageURI(profile.fotoPerfil)
+            itemView.findViewById<TextView>(R.id.textViewHoraPerfil).text ="Hora de Escaneo: " + profile.hora
         }
 }
