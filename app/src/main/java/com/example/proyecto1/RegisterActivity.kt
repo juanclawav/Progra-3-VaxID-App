@@ -20,6 +20,8 @@ class RegisterActivity : AppCompatActivity() {
     var fileUri: Uri? = null
     var gson: Gson = GsonBuilder().apply { registerTypeAdapter(Uri::class.java, UriAdapter())}.create()
 
+    var hasCert = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -27,9 +29,17 @@ class RegisterActivity : AppCompatActivity() {
             finish()
         }
         btnInfo.setOnClickListener{
-            val intent = Intent(this, InfoActivity::class.java)
-            intent.putExtra("UriCertificado",fileUri)
-            startActivity(intent)
+            if(hasCert) {
+                val intent = Intent(this, InfoActivity::class.java)
+                intent.putExtra("UriCertificado", fileUri)
+                startActivity(intent)
+            } else {
+                Toast.makeText(
+                    this,
+                    "Falta certificado",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
         btnCerti.setOnClickListener{
             val file = File(
@@ -57,6 +67,7 @@ class RegisterActivity : AppCompatActivity() {
                 "Certificado guardado exitosamente!",
                 Toast.LENGTH_SHORT
             ).show()
+            hasCert = true
         }
     }
 }

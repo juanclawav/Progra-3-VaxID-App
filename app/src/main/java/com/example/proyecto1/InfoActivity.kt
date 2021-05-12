@@ -74,7 +74,7 @@ class InfoActivity : AppCompatActivity() {
             ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, lugaresLP)
         spinnerLugaresVac.adapter = arrayLgs1
         btnAccept.setOnClickListener {
-            if (checkBoxName.isChecked&&checkBoxLastName.isChecked&&checkBoxPlace.isChecked&&checkBoxName2.isChecked) {
+            if (editTextName.text.toString() == "") {
                 Toast.makeText(this, "Falta Informacion", Toast.LENGTH_SHORT).show();
             } else {
                 // below line is for getting
@@ -100,7 +100,7 @@ class InfoActivity : AppCompatActivity() {
 
                 // setting this dimensions inside our qr code
                 // encoder to generate our qr code.
-                qrString = qrString + editTextLastName.text.toString()+ " + " + editTextName.text.toString() + " + " + fileUri.toString()
+                qrString = editTextLastName.text.toString()+ " + " + editTextName.text.toString() + " + " + fileUri.toString()
                 qrgEncoder = QRGEncoder(qrString, null, QRGContents.Type.TEXT, dimen);
                 try {
                     // getting our qrcode in the form of bitmap.
@@ -114,7 +114,7 @@ class InfoActivity : AppCompatActivity() {
                 }
                 val intent = Intent(this, RegisterActivity::class.java)
                 val newProfile = Perfil(fileUri,certUri,editTextName.text.toString(),editTextLastName.text.toString(),
-                    SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z").format(Date()),bitmap,spinnerLugaresVac.selectedItem.toString(),spinnerDepts.selectedItem.toString()
+                    SimpleDateFormat("yyyy.MM.dd ' - ' HH:mm").format(Date()),bitmap,spinnerLugaresVac.selectedItem.toString(),spinnerDepts.selectedItem.toString()
                 )
                 TemporalStorage.listaPerfiles.add(newProfile)
                 if(TemporalStorage.listaPerfiles[0].nombres.equals(editTextName.text.toString())){
@@ -129,6 +129,7 @@ class InfoActivity : AppCompatActivity() {
         if(requestCode == requestCodeGallery) {
                 fileUri = data?.data
                 imageViewProfilePic.setImageURI(fileUri)
+
             }else if(requestCode == requestCodeCamera) {
                 imageViewProfilePic.setImageURI(fileUri)
             }

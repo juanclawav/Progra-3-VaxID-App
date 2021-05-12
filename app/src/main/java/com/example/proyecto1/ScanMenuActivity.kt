@@ -50,7 +50,7 @@ class ScanMenuActivity : AppCompatActivity() {
                 val newProfile1 = Perfil(Uri.parse(qrDataArray[2]), null, qrDataArray[1],qrDataArray[0],  SimpleDateFormat("yyyy.MM.dd ' - ' HH:mm").format(
                     Date()),null,null,null)
                 TemporalStorage.listaPerfiles.add(newProfile1)
-
+                Toast.makeText(baseContext, "Escaneo exitoso!", Toast.LENGTH_SHORT).show()
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)

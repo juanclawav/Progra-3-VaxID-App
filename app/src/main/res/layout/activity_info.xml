@@ -19,16 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePic" />
 
-    <CheckBox
-        android:id="@+id/checkBoxName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:editable="true"
-        app:layout_constraintEnd_toEndOf="@+id/checkBoxPlace"
-        app:layout_constraintStart_toEndOf="@+id/btnUpload"
-        app:layout_constraintTop_toTopOf="@+id/btnUpload" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
         android:layout_width="match_parent"
@@ -114,33 +104,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abc_vector_test" />
-
-    <CheckBox
-        android:id="@+id/checkBoxName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:editable="false"
-        app:layout_constraintStart_toEndOf="@+id/editTextName"
-        app:layout_constraintTop_toTopOf="@+id/editTextName" />
-
-    <CheckBox
-        android:id="@+id/checkBoxPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:editable="true"
-        app:layout_constraintStart_toEndOf="@+id/spinnerLugaresVac"
-        app:layout_constraintTop_toTopOf="@+id/spinnerLugaresVac" />
-
-    <CheckBox
-        android:id="@+id/checkBoxLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:editable="false"
-        app:layout_constraintStart_toEndOf="@+id/editTextLastName"
-        app:layout_constraintTop_toTopOf="@+id/editTextLastName" />
 
     <ImageButton
         android:id="@+id/btnCam"
